@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>inspecTwitch</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <!--LOGIN AREA-->
+  <div class="tab-login" id="tab-login">
+    <div class="container">
+      <div class="section">
+        <h1 class="mb-2 text-center">Login</h1>
+        <form action="#" id="login">
+          <label class="labels" for="tokenirc">TMI Auth</label>
+          <br />
+          <input type="password" class="mt-1" name="tokenirc" id="tokenirc" placeholder="oauth:...">
+          <br />
+          <label class="labels" for="clientid">Client ID</label>
+          <br />
+          <input type="password" class="mt-1" name="clientid" id="clientid" placeholder="l2expe...">
+          <br />
+          <label class="labels" for="clientsecret">Client Secret</label>
+          <br />
+          <input type="password" class="mt-1" name="clientsecret" id="clientsecret" placeholder="nds10cie....">
+          <br />
+          <label class="labels" for="namebot">Bot name</label>
+          <br />
+          <input type="text" class="mt-1" name="namebot" id="namebot" placeholder="fastterchatter">
+          <br />
+          <label class="labels" for="channel">Channel to inspect</label>
+          <br />
+          <input type="text" class="mt-1" name="channel" id="channel" placeholder="girlazo">
+          <br />
+          <div class="mt-2 full-width text-center">
+            <input id="submit-data" type="submit" class="btn-ok mt-1" value="submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--LOGIN AREA-->
+
+  <!--MMONITOR AREA-->
+  <div class="tab-monitor" id="tab-monitor">
+    <h1 class="mb-2 text-center">Monitor</h1>
+    <canvas id="myChart"></canvas>
+    <div class="mt-2 full-width text-center">
+      <div class="section-info"> 
+        <h3>% Actual real views</h3>
+        <span id="actual-real-users"></span>
+      </div>
+      <div class="section-info"> 
+        <h3>% Actual unidentified views</h3>
+        <span id="actual-unidentified-users"></span>
+      </div>
+      <div class="section-info"> 
+        <h3>Ratio message per min</h3>
+        <span id="ratio-message-min"></span>
+      </div>
+    </div>
+    <div class="mt-2 full-width text-center">
+      <button id="save-data" class=" btn-ok mt-1">Save LOGS</button>
+    </div>
+  </div>
+  <!--MMONITOR AREA-->
+
+
+</body>
+<script>window.$ = window.jQuery = require('jquery');</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="./main.js"></script>
+<html>
